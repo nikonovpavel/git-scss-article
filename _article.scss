@@ -1,0 +1,27 @@
+//===================================================
+// SETTING BLOCK ARTICLE
+//===================================================
+
+.article {
+	width: 100%;
+	padding: 20px;
+	// параметры для картинок и видео
+	figure, iframe, img {
+		width: 100%;
+		max-width: 100%;
+	}
+	// заголовк и подзаголовок
+	h1 + p {
+		font-style: italic;
+		margin-bottom: 2rem;
+	}
+	// дочерние последующие элементы
+	// * - выделение дочерних элементов
+	// x + y - выделяет последующий элемент
+	* + * {margin-top: 1.5rem;}
+	* + h5 {margin-top: 3rem;}
+	* + blockquote {margin-top: 2rem;}
+	blockquote + * {margin-top: 2rem;}
+	iframe > *, figure > *, img > * {margin-top: 3rem;}
+	iframe + iframe, + figure, img + img {margin-top: 3rem;}
+}
